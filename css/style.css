@@ -1,0 +1,491 @@
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    color: #333;
+    font-family: LeeSeoyun;
+}
+::-webkit-scrollbar {
+    display: none;
+    }
+
+/* header */
+header img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.hWrap{
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+}
+
+.lang{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.lang li:last-child:before{
+    content: '|';
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 12px;
+}
+
+.lang li:first-child{
+    height: 12px;
+    margin-right: 8px;
+}
+
+.lang img:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.util{
+    display: flex;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+
+.util li:last-child{
+    margin-left: 10px;
+}
+
+.btnNav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+}
+
+.btnNav span{
+    display: block;
+    background-color: #333;
+    width: 22px;
+    height: 2px;
+    border-radius: 60px;
+    position: absolute;
+    top: 20px;
+    left: 14px;
+    transition: all 0.5s;
+}
+
+.p1{
+    margin-top: -7px;
+}
+.p3{
+    margin-top: 7px;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    display: none;
+    z-index: 800;
+}
+
+
+.gnb{
+    margin-top: 60px;
+}
+.gnb>li{
+    padding-left: 15px;
+}
+
+.gnb>li>a{
+    font-size: 24px;
+    padding-bottom: 10px;
+    display: block;
+    position: relative;
+}
+
+.gnb>li>a:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+}
+
+.gnb>li>a:last-child:after{
+    content: none;
+}
+
+.gnb>li>a.active:after{
+    transform: rotate(135deg);
+}
+
+.subL>li>a{
+    display: block;
+    position: relative;
+}
+
+.subL>li>a:after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    transform: rotate(-45deg);
+    border-radius: 1px;
+}
+
+.subL>li>a.active:after{
+    transform: rotate(135deg);
+}
+
+.sub{
+    display: none;
+}
+
+.sub li{
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.subL li{
+    font-size: 18px;
+}
+
+.btnNav.open{
+    position: absolute;
+    top: 0;
+    left: unset;
+    right: 0;
+}
+
+.btnNav.open span{
+    background-color: #fff;
+    margin-top: 0;
+}
+.btnNav.open .p1{
+    transform: rotate(45deg);
+}
+
+.btnNav.open .p2{
+    opacity: 0;
+}
+
+.btnNav.open .p3{
+    transform: rotate(-45deg);
+}
+
+/* main */
+section{
+    margin: 50px auto;
+}
+
+.s1, .s2, .s3{
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='black' stroke-width='1' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 20px;
+    width: 350px;
+    position: relative;
+    padding: 20px 0;
+}
+
+.s1 .tit{
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+
+
+.tit a{
+    padding: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.tit a:hover h2{
+    color: #eb525f;
+}
+
+.tit a:hover img{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: unset;
+    margin-right: 10px;
+}
+
+.tit img{
+    display: block;
+    height: 20px;
+}
+
+i{
+    display: block;
+    font-style: unset;
+    font-size: 14px;
+}
+
+.s1 i{
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    padding: 10px;
+}
+.pic{
+    width: 140px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: all 1.5s;
+}
+
+.pic img{
+    width: 100%;
+    display: block;
+}
+
+h3{
+    font-weight: unset;
+    font-size: 18px;
+}
+
+h3:before{
+    content: 'O';
+    margin-right: 8px;
+}
+
+.item p{
+    font-size: 14px;
+    margin: 8px 8px 0;
+}
+
+.txt{
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.txt li{
+    margin: 4px 0;
+}
+
+.icon{
+    display: flex;
+}
+
+.icon img{
+    display: block;
+    height: 12px;
+    margin-right: 4px;
+}
+
+.icon span{
+    display: inline-block;
+}
+
+.icon li a{
+    display: flex;
+    align-items: center
+}
+
+.review{
+    padding-right: 30px;
+}
+
+.review span{
+    margin-left: 2px;
+}
+
+.like{
+    position: relative;
+}
+
+.like span{
+    color: #eb525f;
+    position: absolute;
+    top: 25%;
+    right: -20%;
+}
+
+.icon li img:last-child{
+    margin-left: 8px;
+}
+
+.plus{
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.plus span{
+    background-color: #888;
+    display: block;
+    width: 11px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plus span:last-child{
+    background-color: #888;
+    transform: rotate(90deg);
+}
+
+.s2 .tit, .s3 .tit{
+    position: absolute;
+    top: -20px;
+    left: 25%;
+}
+
+.s2 h2{
+    margin-right: unset;
+    margin-left: 10px;
+}
+
+.s2 .tit img{
+    height: unset;
+    width: 20px;
+}
+
+.s2 .pic{
+    width: 150px;
+    height: 150px;
+}
+
+.s2 .pic img{
+    height: 100%;
+}
+
+
+.s2 .box a{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+.love{
+    width: 18px;
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+
+.s2 .box button img{
+    display: block;
+    width: 100%;
+}
+
+.love:hover{
+    background-image: url(../images/heart1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.boxL .pic{
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.boxL .love{
+    width: 18px;
+    position: absolute;
+    top: 4px;
+    left: 154px;
+}
+.boxL .item{
+    text-align: right;
+}
+
+.boxL .item p{
+    margin-right: 0;
+}
+
+.s3 i{
+    margin-left: 10px;
+}
+
+.s3 .box{
+    display: unset;
+}
+
+.s3 h3{
+    text-align: center;
+}
+
+.s3 .box a{
+    display: block;
+}
+
+.s3 .pic{
+    width: 300px;
+    margin: 10px auto 0;
+}
+
+.s3 .item{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.s3 .item p{
+    margin-top: 4px;
+}
+
+.s3 .txt li{
+    margin: 3px 0;
+}
+
+footer{
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    color: #888;
+}
+
+footer p{
+    margin: 4px 0;
+}
+
+footer address{
+    font-style: normal;
+}
